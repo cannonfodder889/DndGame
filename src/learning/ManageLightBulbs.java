@@ -1,3 +1,5 @@
+package learning;
+
 public class ManageLightBulbs {
     public void doStuff() {
         System.out.println(LightBulb.BULBS_COUNT);

@@ -1,3 +1,5 @@
+package learning;
+
 // Wszystkie klasy ktore tworzysz są tak zwanymi matrycami skladaja się na Data czyli wlasciwosci o behaviour czyli metody piszemy w postaci czasownikow
 public class LightBulb {
     static int BULBS_COUNT = 0; //zmienna statyczna - dodaje poto aby zostalo w klasie(opisie)
@@ -16,7 +18,7 @@ public class LightBulb {
          BULBS_COUNT++;
          this.id = BULBS_COUNT;
 
-         System.out.println("LightBulb " + this.id + " created");
+         System.out.println("learning.LightBulb " + this.id + " created");
      }
 
      public LightBulb(String colour) {
@@ -24,7 +26,7 @@ public class LightBulb {
          this.id = BULBS_COUNT;
          this.colour = colour;
 
-         System.out.println("LightBulb " + this.id + " created with colour " + colour);
+         System.out.println("learning.LightBulb " + this.id + " created with colour " + colour);
      }
 
     public void turnOn() {
@@ -37,9 +39,9 @@ public class LightBulb {
 
     public void display() {
         if (state) {
-            System.out.println("LightBulb " + id + " is on and shining bright " + colour);
+            System.out.println("learning.LightBulb " + id + " is on and shining bright " + colour);
         } else {
-            System.out.println("LightBulb " + id + " is off");
+            System.out.println("learning.LightBulb " + id + " is off");
         }
     }
 }

@@ -1,3 +1,5 @@
+package learning;
+
 import java.util.Scanner;
 
 public class MatrixInstances {

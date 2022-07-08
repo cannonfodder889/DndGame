@@ -1,8 +1,12 @@
+package game.mobs;
+
+import game.Debug;
+
 public class Enemy {
-    int hitPoints = 100;
+    private float hitPoints = 100f;
 
     void die(){
-        System.out.println("enemy is dead: " + this);
+        Debug.log("enemy is dead: " + this);
     }
 
     /*
@@ -17,7 +21,7 @@ public class Enemy {
     *  */
     void takeDamage(int damage) {
         hitPoints = hitPoints - damage;
-        System.out.println("teraz mam zytka:" + hitPoints);
+        Debug.log("teraz mam zytka:" + hitPoints);
         if (hitPoints < 0) {
             die();
         }
@@ -27,8 +31,11 @@ public class Enemy {
 
 
     public Enemy(){
-        System.out.println("Enemy created: " + this);
+        Debug.log("game.mobs.Enemy created: " + this);
     }
 
+    public void attack(Hero dupa) {
+        dupa.takeDamage((float) 5);
+    }
 }
 
