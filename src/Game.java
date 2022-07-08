@@ -3,26 +3,23 @@ import java.util.Scanner;
 public class Game {
     public static void main(String[] args) {
 
-        Hero player;
-
         Scanner input = new Scanner(System.in);
-
         System.out.println("Wpisz nazwe swojej postaci");
         String name = input.nextLine();
-        player = new Hero(name);
+
+        Hero player = new Hero(name);
 
         System.out.println("Nazywasz sie " + player.name);
 
 
-        Ork enemyOrk;
-        Skeleton enemySkieleton;
+        Ork enemyOrk = new Ork();
+        Skeleton enemySkieleton = new Skeleton();
 
-        enemyOrk = new Ork();
-        enemySkieleton = new Skeleton();
+        //zapisujemy w zmiennych
+        player.attack(enemyOrk); // wywolaismy metode attack na obiekcie/instancji player pochodzacej z klasy Hero
+        player.attack(enemySkieleton);
 
-
-        enemyOrk.takeDamage(5);
-        enemySkieleton.takeDamage(1000);
+        //enemyOrk.attack(player);
 
         System.out.println(enemyOrk.type);
 

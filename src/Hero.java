@@ -3,6 +3,13 @@ public class Hero { //tworzenie nowej instancji po inpucie zmiennej name
     String name;
     short hitPoints = 100;
     short manaPoints = 100;
+    int baseDamage = 10;
+    int strenght = 2;
+
+
+    public void attack(Enemy enemy){ // aby zapamietac pewna wartosc potrzebujemy zmiennych, ktore to tworzy sie tymczasowo w metodzie(funkcji)
+        enemy.takeDamage(baseDamage * strenght);
+    }
 
 
     public Hero() {
